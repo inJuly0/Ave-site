@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+body {
+  background-color: #1f2430;
+}
+
+html,
+body,
+.container-fluid,
+.row,
+.col-lg-6,
+.CodeMirror {
+  height: 100%;
+}
+
+#ave {
+  border-right: 2px solid #34455a;
+}
+
+.navbar-brand,
+#active {
+  color: #f9ca24 !important;
+}
+
+.navbar-brand {
+  font-family: "Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav-item :hover {
+  color: wheat !important;
+  background-color: #292b2c;
+  border-radius: 10%;
+}
+
+.CodeMirror-linenumber {
+  font-size: 16px;
+}
+
+.navbar {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 10;
+  background-color: #1f2430 !important;
+}

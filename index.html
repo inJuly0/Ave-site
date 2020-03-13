@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="lib/codemirror/lib/codemirror.js"></script>
+  <link rel=" stylesheet" href="lib/codemirror/lib/codemirror.css">
+  <link rel=" stylesheet" href="lib/codemirror/theme/ayu-mirage.css">
+  <link rel="stylesheet" href="src/css/prism.css">
+  <link rel="stylesheet" href="src/css/style.css">
+
+  <title>Ave</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html" style="padding-right: 50px">AVE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./playground.html">Playground <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Docs</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Download</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1 class="display-4 text-center page-header">AVE</h1>
+      <p class="lead">A language designed to make your codebase look <span class="highlight" id="type"></span> </p>
+      <hr class="my-4">
+      <div class="btn-container">
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="learn-more">Get started</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="get-ave">Install Ave</a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="desc">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="desc-title">
+            <h1>What is Ave ?</h1>
+            <hr>
+            <p class="my-4 med">
+              Ave is a general purpose programming language that compiles to Javascript.
+              It aims to keep only the crucial parts of your code and get rid of the uneccessary
+              ones, enforcing a clean, readable codebase.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <pre>
+						<code class="language-javascript">
+  fn greet(name)
+    console.log(`Hello world, this is ${name}!`)
+
+  greet('Ave') #Hello world, this is Ave!
+						</code>
+					</pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <div class="desc-title">
+            <h1>Expressive syntax</h1>
+            <hr>
+            <p class="my-4 med">
+              Ave adds a layer of syntactic sugar over vanilla Javascript, adding
+              tonnes of new features to increase productivity and lessen
+              the load on you, as a developer. The indented block structure is Python inspired
+              to make your code more readable.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <pre>
+						<code class="language-javascript scroll">
+  enum Week
+    Monday, Tuesday, Wednesday,
+    Thursday, Friday, Saturday,
+    Sunday 
+  console.log(Week.Monday) #Monday
+						</code>
+					</pre>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dark">
+
+      <div class="row">
+
+        <div class="col-lg-4">
+          <h3>Open Source</h3>
+          <br>
+          <p>Ave is completely open source. It's source code lives <a class="a-link"
+              href="https://github.com/tiltproofRain/Ave">right here</a> on github.
+            Feel free to take a look and contribute, suggest changes or report bugs.
+          </p>
+          <div class="btn-center">
+            <a class="btn btn-secondary btn-lg">View source code</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <h3>Smooth learning curve</h3>
+          <br>
+          <p>Assuming you've worked with javascript before, Ave is a piece of cake to master.
+            If you every face any hassle, you can always refer to the documentation.
+          </p>
+          <div class="btn-center">
+            <a class="btn btn-secondary btn-lg">Go to Docs</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <h3>In the end, its JS</h3>
+          <br>
+          <p>Ave compiles to ES6 Javascript, steaming and ready to be crunched by your
+            favorite javascript runtimes environments. Think of it more as a syntax than a language !</p>
+          <div class="btn-center">
+            <a class="btn btn-secondary btn-lg" href="./pages/playground.html">Try online</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row playground">
+      <div class="col-lg-6" id="ave-area">
+
+      </div>
+      <div class="col-lg-6 js">
+        <pre class="js-area">
+          <code class="language-javascript"></code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="lib/codemirror/mode/coffeescript/coffeescript.js"></script>
+
+  <script>
+    const app = document.getElementById('type');
+
+    const typewriter = new Typewriter(app, {
+      loop: true
+    });
+
+    typewriter.typeString('clean.')
+      .pauseFor(2500)
+      .deleteAll()
+      .typeString('precise.')
+      .pauseFor(2500)
+      .deleteAll()
+      .typeString('pretty.')
+      .pauseFor(2500)
+      .start();
+
+    const editor = document.getElementById('ave-area');
+    const myCodeMirror = CodeMirror(editor, {
+      value:
+        `#prints all even numbers between 1 and 100
+console.log(i) for i in 1 to 100 when !(i % 2)`,
+      mode: "coffeescript",
+      indentUnit: 4,
+      lineNumbers: true,
+      theme: 'ayu-mirage',
+      lineWrapping: true
+    });
+
+  </script>
+
+  <script src="lib/prism/prism.js"></script>
+
+</body>
+
+</html>
